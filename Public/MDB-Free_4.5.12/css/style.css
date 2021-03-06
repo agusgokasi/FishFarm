@@ -1,0 +1,114 @@
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	float: left;
+	min-width: 10rem;
+	padding: .5rem 0;
+	margin: .125rem 0 0;
+	font-size: 1rem;
+	color: #212529;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, .15);
+	border-radius: .125rem;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+
+.dropdown-menu.show {
+	display: block
+}
+
+@media (min-width:576px) {
+	.navbar-expand-sm .navbar-nav .dropdown-menu {
+		position: absolute
+	}
+	.navbar-expand-sm .navbar-nav .dropdown-menu-right {
+		right: 0;
+		left: auto
+	}
+}
+
+@media (min-width:992px) {
+	.navbar-expand-lg .navbar-nav .dropdown-menu {
+		position: absolute
+	}
+	.navbar-expand-lg .navbar-nav .dropdown-menu-right {
+		right: 0;
+		left: auto
+	}
+}
+
+@media (min-width:1200px) {
+	.navbar-expand-xl .navbar-nav .dropdown-menu {
+		position: absolute
+	}
+	.navbar-expand-xl .navbar-nav .dropdown-menu-right {
+		right: 0;
+		left: auto
+	}
+	.navbar-expand-xl .dropup .dropdown-menu {
+		top: auto;
+		bottom: 100%
+	}
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+	position: absolute
+}
+
+.navbar-expand .navbar-nav .dropdown-menu-right {
+	right: 0;
+	left: auto
+}
+.btn-group-vertical .dropdown-menu,
+.btn-group .dropdown-menu {
+	border-radius: 0 0 .125rem .125rem
+}
+.dropdown-menu {
+	display: none;
+	padding: .25rem 0;
+	border: 0;
+	opacity: 0;
+	transform: scale(0);
+	transform-origin: 0 0;
+	will-change: transform, opacity;
+	transition: transform .3s cubic-bezier(.4, 0, .2, 1), opacity .2s cubic-bezier(.4, 0, .2, 1)
+}
+@media (min-width:768px) {
+	.dropdown-menu {
+		padding: .5rem 0
+	}
+}
+.dropdown-menu.showing {
+	animation-name: d;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.4, 0, .2, 1)
+}
+
+.dropdown-menu.show,
+.open>.dropdown-menu {
+	display: block;
+	opacity: 1;
+	transform: scale(1)
+}
+
+.dropdown-menu.hiding {
+	display: block;
+	opacity: 0;
+	transform: scale(0)
+}
+
+.dropdown-menu.dropdown-menu-left,
+.dropdown-menu[x-placement=bottom-start] {
+	transform-origin: 0 0
+}
+
+.dropdown-menu.dropdown-menu-right,
+.dropdown-menu[x-placement=bottom-end] {
+	transform-origin: 100% 0
+}
